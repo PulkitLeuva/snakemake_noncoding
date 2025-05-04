@@ -1,0 +1,70 @@
+NOTICE: the --polish argument is set ON automatically (use --nopolish to change this behavior)
+
+NOTICE: Running with system command <convert2annovar.pl  -includeinfo -allsample -withfreq -format vcf4 /lustre/pulkit.h/snakemake_local/non_coding_rna_snakemake/input/new_data_output/annovar_input.vcf > /lustre/pulkit.h/snakemake_local/non_coding_rna_snakemake/test_output/annovar/annovar_output-remove.avinput>
+NOTICE: Finished reading 1001 lines from VCF file
+NOTICE: A total of 1000 locus in VCF file passed QC threshold, representing 998 SNPs (519 transitions and 479 transversions) and 2 indels/substitutions
+NOTICE: Finished writing allele frequencies based on 998 SNP genotypes (519 transitions and 479 transversions) and 2 indels/substitutions for 0 samples
+
+NOTICE: Running with system command <./table_annovar.pl /lustre/pulkit.h/snakemake_local/non_coding_rna_snakemake/test_output/annovar/annovar_output-remove.avinput /lustre/pulkit.h/snakemake_local/annovar/humandb -buildver hg19 -outfile /lustre/pulkit.h/snakemake_local/non_coding_rna_snakemake/test_output/annovar/annovar_output-remove -protocol refGene,gwasCatalog,avsnp150,clinvar_20190305,gnomad211_genome,dbnsfp35a -operation gx,r,f,f,f,f -nastring . -xreffile /lustre/pulkit.h/snakemake_local/annovar/humandb/morfee.lof_metrics.by_gene.txt -otherinfo>
+NOTICE: the --polish argument is set ON automatically (use --nopolish to change this behavior)
+-----------------------------------------------------------------
+NOTICE: Processing operation=gx protocol=refGene
+
+NOTICE: Running with system command <annotate_variation.pl -geneanno -buildver hg19 -dbtype refGene -outfile /lustre/pulkit.h/snakemake_local/non_coding_rna_snakemake/test_output/annovar/annovar_output-remove.refGene -exonsort -nofirstcodondel /lustre/pulkit.h/snakemake_local/non_coding_rna_snakemake/test_output/annovar/annovar_output-remove.avinput /lustre/pulkit.h/snakemake_local/annovar/humandb>
+NOTICE: Output files are written to /lustre/pulkit.h/snakemake_local/non_coding_rna_snakemake/test_output/annovar/annovar_output-remove.refGene.variant_function, /lustre/pulkit.h/snakemake_local/non_coding_rna_snakemake/test_output/annovar/annovar_output-remove.refGene.exonic_variant_function
+NOTICE: Reading gene annotation from /lustre/pulkit.h/snakemake_local/annovar/humandb/hg19_refGene.txt ... Done with 78239 transcripts (including 18578 without coding sequence annotation) for 28293 unique genes
+NOTICE: Processing next batch with 1000 unique variants in 1000 input lines
+NOTICE: Reading FASTA sequences from /lustre/pulkit.h/snakemake_local/annovar/humandb/hg19_refGeneMrna.fa ... Done with 31 sequences
+WARNING: A total of 465 sequences will be ignored due to lack of correct ORF annotation
+
+NOTICE: Running with system command <coding_change.pl  /lustre/pulkit.h/snakemake_local/non_coding_rna_snakemake/test_output/annovar/annovar_output-remove.refGene.exonic_variant_function.orig /lustre/pulkit.h/snakemake_local/annovar/humandb/hg19_refGene.txt /lustre/pulkit.h/snakemake_local/annovar/humandb/hg19_refGeneMrna.fa -alltranscript -out /lustre/pulkit.h/snakemake_local/non_coding_rna_snakemake/test_output/annovar/annovar_output-remove.refGene.fa -newevf /lustre/pulkit.h/snakemake_local/non_coding_rna_snakemake/test_output/annovar/annovar_output-remove.refGene.exonic_variant_function>
+NOTICE: The xrefkey is provided in header as <transcript obs_mis exp_mis oe_mis mu_mis possible_mis obs_mis_pphen exp_mis_pphen oe_mis_pphen possible_mis_pphen obs_syn exp_syn oe_syn mu_syn possible_syn obs_lof mu_lof possible_lof exp_lof pLI pNull pRec oe_lof oe_syn_lower oe_syn_upper oe_mis_lower oe_mis_upper oe_lof_lower oe_lof_upper constraint_flag syn_z mis_z lof_z oe_lof_upper_rank oe_lof_upper_bin oe_lof_upper_bin_6 n_sites classic_caf max_af no_lofs obs_het_lof obs_hom_lof defined p exp_hom_lof classic_caf_afr classic_caf_amr classic_caf_asj classic_caf_eas classic_caf_fin classic_caf_nfe classic_caf_oth classic_caf_sas p_afr p_amr p_asj p_eas p_fin p_nfe p_oth p_sas transcript_type gene_id transcript_level cds_length num_coding_exons gene_type gene_length exac_pLI exac_obs_lof exac_exp_lof exac_oe_lof brain_expression chromosome start_position end_position>
+NOTICE: Finished reading 1494084 cross references (each with 76 fields) from /lustre/pulkit.h/snakemake_local/annovar/humandb/morfee.lof_metrics.by_gene.txt
+-----------------------------------------------------------------
+NOTICE: Processing operation=r protocol=gwasCatalog
+
+NOTICE: Running with system command <annotate_variation.pl -regionanno -dbtype gwasCatalog -buildver hg19 -outfile /lustre/pulkit.h/snakemake_local/non_coding_rna_snakemake/test_output/annovar/annovar_output-remove /lustre/pulkit.h/snakemake_local/non_coding_rna_snakemake/test_output/annovar/annovar_output-remove.avinput /lustre/pulkit.h/snakemake_local/annovar/humandb>
+NOTICE: Output file is written to /lustre/pulkit.h/snakemake_local/non_coding_rna_snakemake/test_output/annovar/annovar_output-remove.hg19_gwasCatalog
+NOTICE: Reading annotation database /lustre/pulkit.h/snakemake_local/annovar/humandb/hg19_gwasCatalog.txt ... Done with 392271 regions
+NOTICE: Finished region-based annotation on 1000 genetic variants
+-----------------------------------------------------------------
+NOTICE: Processing operation=f protocol=avsnp150
+
+NOTICE: Running system command <annotate_variation.pl -filter -dbtype avsnp150 -buildver hg19 -outfile /lustre/pulkit.h/snakemake_local/non_coding_rna_snakemake/test_output/annovar/annovar_output-remove /lustre/pulkit.h/snakemake_local/non_coding_rna_snakemake/test_output/annovar/annovar_output-remove.avinput /lustre/pulkit.h/snakemake_local/annovar/humandb>
+NOTICE: Output file with variants matching filtering criteria is written to /lustre/pulkit.h/snakemake_local/non_coding_rna_snakemake/test_output/annovar/annovar_output-remove.hg19_avsnp150_dropped, and output file with other variants is written to /lustre/pulkit.h/snakemake_local/non_coding_rna_snakemake/test_output/annovar/annovar_output-remove.hg19_avsnp150_filtered
+NOTICE: Processing next batch with 1000 unique variants in 1000 input lines
+NOTICE: Database index loaded. Total number of bins is 28258790 and the number of bins to be scanned is 985
+NOTICE: Scanning filter database /lustre/pulkit.h/snakemake_local/annovar/humandb/hg19_avsnp150.txt...Done
+-----------------------------------------------------------------
+NOTICE: Processing operation=f protocol=clinvar_20190305
+NOTICE: Finished reading 5 column headers for '-dbtype clinvar_20190305'
+
+NOTICE: Running system command <annotate_variation.pl -filter -dbtype clinvar_20190305 -buildver hg19 -outfile /lustre/pulkit.h/snakemake_local/non_coding_rna_snakemake/test_output/annovar/annovar_output-remove /lustre/pulkit.h/snakemake_local/non_coding_rna_snakemake/test_output/annovar/annovar_output-remove.avinput /lustre/pulkit.h/snakemake_local/annovar/humandb -otherinfo>
+NOTICE: the --dbtype clinvar_20190305 is assumed to be in generic ANNOVAR database format
+NOTICE: Output file with variants matching filtering criteria is written to /lustre/pulkit.h/snakemake_local/non_coding_rna_snakemake/test_output/annovar/annovar_output-remove.hg19_clinvar_20190305_dropped, and output file with other variants is written to /lustre/pulkit.h/snakemake_local/non_coding_rna_snakemake/test_output/annovar/annovar_output-remove.hg19_clinvar_20190305_filtered
+NOTICE: Processing next batch with 1000 unique variants in 1000 input lines
+NOTICE: Database index loaded. Total number of bins is 45822 and the number of bins to be scanned is 17
+NOTICE: Scanning filter database /lustre/pulkit.h/snakemake_local/annovar/humandb/hg19_clinvar_20190305.txt...Done
+-----------------------------------------------------------------
+NOTICE: Processing operation=f protocol=gnomad211_genome
+NOTICE: Finished reading 17 column headers for '-dbtype gnomad211_genome'
+
+NOTICE: Running system command <annotate_variation.pl -filter -dbtype gnomad211_genome -buildver hg19 -outfile /lustre/pulkit.h/snakemake_local/non_coding_rna_snakemake/test_output/annovar/annovar_output-remove /lustre/pulkit.h/snakemake_local/non_coding_rna_snakemake/test_output/annovar/annovar_output-remove.avinput /lustre/pulkit.h/snakemake_local/annovar/humandb -otherinfo>
+NOTICE: Output file with variants matching filtering criteria is written to /lustre/pulkit.h/snakemake_local/non_coding_rna_snakemake/test_output/annovar/annovar_output-remove.hg19_gnomad211_genome_dropped, and output file with other variants is written to /lustre/pulkit.h/snakemake_local/non_coding_rna_snakemake/test_output/annovar/annovar_output-remove.hg19_gnomad211_genome_filtered
+NOTICE: Processing next batch with 1000 unique variants in 1000 input lines
+NOTICE: Database index loaded. Total number of bins is 28119985 and the number of bins to be scanned is 985
+NOTICE: Scanning filter database /lustre/pulkit.h/snakemake_local/annovar/humandb/hg19_gnomad211_genome.txt...Done
+-----------------------------------------------------------------
+NOTICE: Processing operation=f protocol=dbnsfp35a
+NOTICE: Finished reading 70 column headers for '-dbtype dbnsfp35a'
+
+NOTICE: Running system command <annotate_variation.pl -filter -dbtype dbnsfp35a -buildver hg19 -outfile /lustre/pulkit.h/snakemake_local/non_coding_rna_snakemake/test_output/annovar/annovar_output-remove /lustre/pulkit.h/snakemake_local/non_coding_rna_snakemake/test_output/annovar/annovar_output-remove.avinput /lustre/pulkit.h/snakemake_local/annovar/humandb -otherinfo>
+NOTICE: Output file with variants matching filtering criteria is written to /lustre/pulkit.h/snakemake_local/non_coding_rna_snakemake/test_output/annovar/annovar_output-remove.hg19_dbnsfp35a_dropped, and output file with other variants is written to /lustre/pulkit.h/snakemake_local/non_coding_rna_snakemake/test_output/annovar/annovar_output-remove.hg19_dbnsfp35a_filtered
+NOTICE: Processing next batch with 1000 unique variants in 1000 input lines
+NOTICE: Database index loaded. Total number of bins is 550512 and the number of bins to be scanned is 26
+NOTICE: Scanning filter database /lustre/pulkit.h/snakemake_local/annovar/humandb/hg19_dbnsfp35a.txt...Done
+-----------------------------------------------------------------
+NOTICE: Multianno output file is written to /lustre/pulkit.h/snakemake_local/non_coding_rna_snakemake/test_output/annovar/annovar_output-remove.hg19_multianno.txt
+NOTICE: Reading from /lustre/pulkit.h/snakemake_local/non_coding_rna_snakemake/test_output/annovar/annovar_output-remove.hg19_multianno.txt
+-----------------------------------------------------------------
+NOTICE: VCF output is written to /lustre/pulkit.h/snakemake_local/non_coding_rna_snakemake/test_output/annovar/annovar_output-remove.hg19_multianno.vcf

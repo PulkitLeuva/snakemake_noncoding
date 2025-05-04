@@ -1,0 +1,12 @@
+ANNOVAR Version:
+	$Date: 2020-06-07 23:56:37 -0400 (Sun,  7 Jun 2020) $
+ANNOVAR Information:
+	For questions, comments, documentation, bug reports and program update, please visit http://www.openbioinformatics.org/annovar/
+ANNOVAR Command:
+	./annotate_variation.pl -filter -dbtype dbnsfp35a -buildver hg19 -outfile /lustre/pulkit.h/snakemake_local/non_coding_rna_snakemake/test_output/annovar/annovar_output-remove /lustre/pulkit.h/snakemake_local/non_coding_rna_snakemake/test_output/annovar/annovar_output-remove.avinput /lustre/pulkit.h/snakemake_local/annovar/humandb -otherinfo
+ANNOVAR Started:
+	Thu May  1 09:55:07 2025
+NOTICE: Output file with variants matching filtering criteria is written to /lustre/pulkit.h/snakemake_local/non_coding_rna_snakemake/test_output/annovar/annovar_output-remove.hg19_dbnsfp35a_dropped, and output file with other variants is written to /lustre/pulkit.h/snakemake_local/non_coding_rna_snakemake/test_output/annovar/annovar_output-remove.hg19_dbnsfp35a_filtered
+NOTICE: Processing next batch with 1000 unique variants in 1000 input lines
+NOTICE: Database index loaded. Total number of bins is 550512 and the number of bins to be scanned is 26
+NOTICE: Scanning filter database /lustre/pulkit.h/snakemake_local/annovar/humandb/hg19_dbnsfp35a.txt...Done

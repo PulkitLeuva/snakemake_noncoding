@@ -1,0 +1,13 @@
+ANNOVAR Version:
+	$Date: 2020-06-07 23:56:37 -0400 (Sun,  7 Jun 2020) $
+ANNOVAR Information:
+	For questions, comments, documentation, bug reports and program update, please visit http://www.openbioinformatics.org/annovar/
+ANNOVAR Command:
+	./annotate_variation.pl -geneanno -buildver hg19 -dbtype refGene -outfile /lustre/pulkit.h/snakemake_local/non_coding_rna_snakemake/test_output/annovar/annovar_output-remove.refGene -exonsort -nofirstcodondel /lustre/pulkit.h/snakemake_local/non_coding_rna_snakemake/test_output/annovar/annovar_output-remove.avinput /lustre/pulkit.h/snakemake_local/annovar/humandb
+ANNOVAR Started:
+	Thu May  1 09:53:55 2025
+NOTICE: Output files are written to /lustre/pulkit.h/snakemake_local/non_coding_rna_snakemake/test_output/annovar/annovar_output-remove.refGene.variant_function, /lustre/pulkit.h/snakemake_local/non_coding_rna_snakemake/test_output/annovar/annovar_output-remove.refGene.exonic_variant_function
+NOTICE: Reading gene annotation from /lustre/pulkit.h/snakemake_local/annovar/humandb/hg19_refGene.txt ... Done with 78239 transcripts (including 18578 without coding sequence annotation) for 28293 unique genes
+NOTICE: Processing next batch with 1000 unique variants in 1000 input lines
+NOTICE: Reading FASTA sequences from /lustre/pulkit.h/snakemake_local/annovar/humandb/hg19_refGeneMrna.fa ... Done with 31 sequences
+WARNING: A total of 465 sequences will be ignored due to lack of correct ORF annotation
